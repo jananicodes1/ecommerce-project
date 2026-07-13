@@ -9,6 +9,7 @@ from db.database import Base, engine
 from models.product import Product
 from routers.product_router import router as product_router
 from routers.order_router import router as order_router
+from routers.cart_router import router as  cart_router
 
 Base.metadata.create_all(bind=engine)
 
@@ -31,3 +32,5 @@ def home():
     return {
         "message": "Product API Running"
     }
+
+app.include_router(cart_router)

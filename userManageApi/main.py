@@ -2,7 +2,7 @@ from fastapi import FastAPI, APIRouter, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
-from userManageApi.routers.cart_router import router as cart_router
+
 from userManageApi.database import engine, Base, get_db
 from userManageApi.models.user import User
 from userManageApi.schemas import (
@@ -271,5 +271,3 @@ def admin_update_user(
 
 
 app.include_router(router)
-
-app.include_router(cart_router)

@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from userManageApi.models.cart import Cart
 from userManageApi.security import get_current_user
-from userManageApi.database import get_db
+from db.database import get_db
 
 router = APIRouter(
     prefix="/Cart",
