@@ -3,12 +3,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
 
-from userManageApi.database import engine, Base, get_db
-from userManageApi.models.user import User
-from userManageApi.schemas import (
+from database import engine, Base, get_db
+from models.user import User
+from schemas import (
     UserRegister, OTPVerify, UserLogin, UserUpdate, TokenResponse
 )
-from userManageApi.security import (
+from security import (
     encrypt_password,
     decrypt_password,
     create_access_token,
