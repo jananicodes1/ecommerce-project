@@ -111,7 +111,7 @@ export const removeFromCart = async (product_id) => {
 export const updateCartQuantity = async (product_id, quantity) => {
   const token = localStorage.getItem("token");
   const res = await fetch(
-    "http://127.0.0.1:8001/Cart/Update/" + product_id + "?quantity=" + quantity,
+    "http://127.0.0.1:8000/Cart/Update/" + product_id + "?quantity=" + quantity,
     {
       method: "PUT",
       headers: {
