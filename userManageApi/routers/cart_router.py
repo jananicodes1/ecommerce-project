@@ -15,7 +15,7 @@ def add_to_cart(
     current_user = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    # Already cart la irukka check pannunga
+
     existing = db.query(Cart).filter(
         Cart.user_id == current_user.user_id,
         Cart.product_id == product_id
