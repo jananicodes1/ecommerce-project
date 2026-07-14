@@ -1,5 +1,5 @@
-const USER_API = "http://127.0.0.1:8001";
-const PRODUCT_API = "http://127.0.0.1:8000";
+const USER_API = "https://ecommerce-project-qqdk.onrender.com";
+const PRODUCT_API = "https://ecommerce-project-1xbgbonrender.com";
 
 export const loginUser = async (data) => {
   const res = await fetch(USER_API + "/User/Login", {
