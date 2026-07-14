@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, ForeignKey
-from userManageApi.database import Base
+from database import Base
 
 class Cart(Base):
     __tablename__ = "cart"
