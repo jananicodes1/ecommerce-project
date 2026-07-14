@@ -6,7 +6,7 @@ import ProductDetails from "./pages/ProductDetails";
 import Admin from "./pages/Admin";
 import Profile from "./pages/Profile";
 import Register from "./pages/Register";
-import Cart from "./pages/Cart";
+import Cart from "./pages/cart";
 import Orders from "./pages/Orders";
 import ProtectedRoute from "./components/ProductedRoute";
 
