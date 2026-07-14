@@ -1,5 +1,5 @@
 const USER_API = "https://ecommerce-project-qqdk.onrender.com";
-const PRODUCT_API = "https://ecommerce-project-1xbgbonrender.com";
+const PRODUCT_API = "https://ecommerce-project-1-xbgb.onrender.com";
 
 export const loginUser = async (data) => {
   const res = await fetch(USER_API + "/User/Login", {
