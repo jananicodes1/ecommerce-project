@@ -4,8 +4,8 @@ from fastapi import Depends, HTTPException
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from cryptography.fernet import Fernet
 from sqlalchemy.orm import Session
-from userManageApi.database import get_db
-from userManageApi.models.user import User
+from database import get_db
+from models.user import User
 
 
 SECRET_KEY = "secret123"
