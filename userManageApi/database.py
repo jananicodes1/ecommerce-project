@@ -1,7 +1,11 @@
+import os
+from dotenv import load_dotenv
+load_dotenv
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-DATABASE_URL = "postgresql://postgres:220405@localhost:5432/tsf_db"
+DATABASE_URL = os.getenv("DATABASE_URL","postgresql://postgres:220405@localhost:5432/tsf_db")
 
 engine = create_engine(DATABASE_URL)
 
