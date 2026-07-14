@@ -21,7 +21,7 @@ function Home() {
   const addToCart = async (id) => {
     const token = localStorage.getItem("token");
     const res = await fetch(
-      `http://127.0.0.1:8000/Cart/Add?product_id=${id}`,
+      ("https://ecommerce-project-1-xbgb.onrender.com/Cart/Add?product_id=" + id),
       {
         method: "POST",
         headers: {
