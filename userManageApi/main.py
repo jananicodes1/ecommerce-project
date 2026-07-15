@@ -8,12 +8,12 @@ from fastapi import FastAPI, APIRouter, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
-from database import engine, Base, get_db
+from userManageApi.database import engine, Base, get_db
 from models.user import User
-from schemas import (
+from userManageApi.schemas import (
     UserRegister, OTPVerify, UserLogin, UserUpdate, TokenResponse
 )
-from security import (
+from userManageApi.security import (
     encrypt_password,
     decrypt_password,
     create_access_token,
@@ -29,12 +29,15 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "https://storied-rugelach-26cf17.netlify.app",
+        "https://6a570c77af045cff0d5acfae--storied-rugelach-26cf17.netlify.app",
+        "https://6a5645cb056d8ec84a563a01--storied-rugelach-26cf17.netlify.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 router = APIRouter()
 
