@@ -20,7 +20,7 @@ function Admin() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://127.0.0.1:8000/orders/all-orders", {
+    fetch("https://ecommerce-project-1-xbgb.onrender.com/orders/all-orders", {
       headers: { "Authorization": "Bearer " + token }
     })
       .then(res => res.json())
@@ -123,7 +123,7 @@ function Admin() {
         </button>
       </div>
 
-      {/* Orders Tab */}
+    
       {activeTab === "orders" && (
         <div>
           <h3>All Orders</h3>

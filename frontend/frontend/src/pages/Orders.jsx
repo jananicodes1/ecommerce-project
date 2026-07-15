@@ -6,7 +6,7 @@ function Orders() {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    fetch("http://127.0.0.1:8000/orders/my-orders", {
+    fetch("https://ecommerce-project-1-xbgb.onrender.com/orders/my-orders", {
       headers: {
         "Authorization": "Bearer " + token
       }
