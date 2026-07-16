@@ -9,18 +9,29 @@ function Navbar() {
   };
 
   return (
-    <nav style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      padding: "10px 30px",
-      backgroundColor: "#1a1a2e",
-      color: "white"
-    }}>
-
+    <nav
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        flexWrap: "wrap",
+        padding: "10px 20px",
+        backgroundColor: "#1a1a2e",
+        color: "white",
+        gap: "10px",
+      }}
+    >
       <h2 style={{ margin: 0, color: "white" }}>E-Commerce</h2>
 
-      <div style={{ display: "flex", gap: "20px" }}>
+      <div
+        style={{
+          display: "flex",
+          gap: "15px",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <Link to="/" style={{ color: "white", textDecoration: "none" }}>Home</Link>
         <Link to="/login" style={{ color: "white", textDecoration: "none" }}>Login</Link>
         <Link to="/register" style={{ color: "white", textDecoration: "none" }}>Register</Link>
@@ -32,18 +43,17 @@ function Navbar() {
         <button
           onClick={logout}
           style={{
-            backgroundColor: "Blue",
+            backgroundColor: "blue",
             color: "white",
             border: "none",
             padding: "5px 10px",
             borderRadius: "5px",
-            cursor: "pointer"
+            cursor: "pointer",
           }}
         >
           Logout
         </button>
       </div>
-
     </nav>
   );
 }
