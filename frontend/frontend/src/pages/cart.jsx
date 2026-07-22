@@ -11,7 +11,7 @@ function Cart() {
       if (Array.isArray(items)) {
         const detailed = await Promise.all(
           items.map(async (item) => {
-            const res = await fetch("http://127.0.0.1:8000/products/" + item.product_id);
+            const res = await fetch("https://ecommerce-project-1-xbgb.onrender.com/products/" + item.product_id);
             const product = await res.json();
             return {
               ...item,
